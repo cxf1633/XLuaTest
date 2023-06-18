@@ -87,9 +87,9 @@ function M:Init()
 	-- service.Register(M.Tick, self)
 	-- BuildingInteractive.Init()
 
-	print("this is a print")
-	warn("this is a warn")
-	error("this is a error")
+	-- print("this is a print")
+	-- warn("this is a warn")
+	-- error("this is a error")
 end
 
 function M:OnBackPressed()
