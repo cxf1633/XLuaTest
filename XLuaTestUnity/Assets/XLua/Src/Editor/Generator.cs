@@ -306,6 +306,7 @@ namespace CSObjectWrapEditor
             //warnning: filter all method start with "op_"  "add_" "remove_" may  filter some ordinary method
             parameters.Set("methods", type.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.IgnoreCase | BindingFlags.DeclaredOnly)
                 .Where(method => !isDefined(method, typeof (ExtensionAttribute)) || method.GetParameters()[0].ParameterType.IsInterface || method.DeclaringType != type)
+                .Where(method => method.GetParameters().All(parameter => !parameter.ParameterType.IsPointer))
                 .Where(method => !method.IsSpecialName 
                     || (
                          ((method.Name == "get_Item" && method.GetParameters().Length == 1) || (method.Name == "set_Item" && method.GetParameters().Length == 2)) 
@@ -904,7 +905,7 @@ namespace CSObjectWrapEditor
         {
             string filePath = save_path + "DelegatesGensBridge.cs";
             StreamWriter textWriter = new StreamWriter(filePath, false, Encoding.UTF8);
-            types = types.Where(type => !type.GetMethod("Invoke").GetParameters().Any(paramInfo => paramInfo.ParameterType.IsGenericParameter));
+            types = types.Where(type => type.GetMethod("Invoke") != null && !type.GetMethod("Invoke").GetParameters().Any(paramInfo => paramInfo.ParameterType.IsGenericParameter));
             var hotfxDelegates = new List<MethodInfoSimulation>();
             var comparer = new MethodInfoSimulationComparer();
 
@@ -1818,7 +1819,7 @@ namespace CSObjectWrapEditor
         }
 #if !XLUA_GENERAL
         [UnityEditor.Callbacks.PostProcessBuild(1)]
-        public static void CheckGenerate(BuildTarget target, string pathToBuiltProject)
+        public static void CheckGenrate(BuildTarget target, string pathToBuiltProject)
         {
             if (EditorApplication.isCompiling || Application.isPlaying)
             {
@@ -1826,7 +1827,7 @@ namespace CSObjectWrapEditor
             }
             if (!DelegateBridge.Gen_Flag)
             {
-                throw new InvalidOperationException("Code has not been generated, may be not work in phone!");
+                Debug.LogError("Code has not been genrated, may be not work in phone!");
             }
         }
 #endif

@@ -133,10 +133,14 @@ namespace XLua
         }
 
         Dictionary<Type, bool> loaded_types = new Dictionary<Type, bool>();
+        public static Action<Type> callbackWhenLoadType;
         public bool TryDelayWrapLoader(RealStatePtr L, Type type)
         {
             if (loaded_types.ContainsKey(type)) return true;
             loaded_types.Add(type, true);
+            #if UNITY_EDITOR
+            callbackWhenLoadType?.Invoke(type);
+            #endif
 
             LuaAPI.luaL_newmetatable(L, type.FullName); //先建一个metatable，因为加载过程可能会需要用到
             LuaAPI.lua_pop(L, 1);
@@ -332,7 +336,7 @@ namespace XLua
                 }
                 IEnumerable<IGrouping<MethodInfo, Type>> groups = (from type in cs_call_lua
                               where typeof(Delegate).IsAssignableFrom(type) && type != typeof(Delegate) && type != typeof(MulticastDelegate)
-                              where !type.GetMethod("Invoke").GetParameters().Any(paramInfo => paramInfo.ParameterType.IsGenericParameter)
+                              where type.GetMethod("Invoke") != null && !type.GetMethod("Invoke").GetParameters().Any(paramInfo => paramInfo.ParameterType.IsGenericParameter)
                                select type).GroupBy(t => t.GetMethod("Invoke"), new CompareByArgRet());
 
                 ce.SetGenInterfaces(cs_call_lua.Where(type=>type.IsInterface()).ToList());
@@ -372,14 +376,14 @@ namespace XLua
             else
 #endif
             {
-                foreach (var pinfo in parameters)
+                /*foreach (var pinfo in parameters)
                 {
                     if (pinfo.ParameterType.IsValueType() || pinfo.IsOut || pinfo.ParameterType.IsByRef)
                     {
                         genericDelegateCreator = (x) => null;
                         break;
                     }
-                }
+                }*/
                 if (genericDelegateCreator == null)
                 {
                     var typeArgs = parameters.Select(pinfo => pinfo.ParameterType);
@@ -1606,7 +1610,7 @@ namespace XLua
             }
         }
 
-        public delegate bool CheckFunc<T>(RealStatePtr L, int idx);
+
         public delegate void GetFunc<T>(RealStatePtr L, int idx,  out T val);
 
         public void RegisterPushAndGetAndUpdate<T>(Action<RealStatePtr, T> push, GetFunc<T> get, Action<RealStatePtr, int, T> update)
@@ -1638,14 +1642,6 @@ namespace XLua
                     update(L, idx, (T)obj);
                 }
             );
-        }
-
-        public void RegisterChecker<T>(CheckFunc<T> check)
-        {
-            objectCheckers.AddChecker(typeof(T), (L, idx) =>
-            {
-                return check(L, idx);
-            });
         }
 
         public void RegisterCaster<T>(GetFunc<T> get)

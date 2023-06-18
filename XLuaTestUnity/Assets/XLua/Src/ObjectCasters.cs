@@ -191,11 +191,6 @@ namespace XLua
             };
         }
 
-        public void AddChecker(Type type, ObjectCheck oc)
-        {
-            checkersMap[type] = oc;
-        }
-
         public ObjectCheck GetChecker(Type type)
         {
             if (type.IsByRef) type = type.GetElementType();
