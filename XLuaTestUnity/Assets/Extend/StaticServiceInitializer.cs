@@ -5,9 +5,9 @@ using UnityEngine.Rendering.Universal;
 using XLua;
 #endif
 // using DG.Tweening;
-using Extend.Asset;
+// using Extend.Asset;
 using Extend.Common;
-using Extend.DebugUtil;
+// using Extend.DebugUtil;
 // using Extend.LuaUtil;
 // using Extend.Network;
 // using Extend.Network.HttpClient;
@@ -24,10 +24,10 @@ namespace Extend {
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
 		private static void OnInitAssembliesLoaded() {
 			CSharpServiceManager.Initialize();
-			CSharpServiceManager.Register(new ErrorLogToFile());
-			CSharpServiceManager.Register(new StatService());
-			CSharpServiceManager.Register(new AssetService());
-			CSharpServiceManager.Register(new GameSystemSetting());
+			// CSharpServiceManager.Register(new ErrorLogToFile());
+			// CSharpServiceManager.Register(new StatService());
+			// CSharpServiceManager.Register(new AssetService());
+			// CSharpServiceManager.Register(new GameSystemSetting());
 			// CSharpServiceManager.Register(new DownLoadService());
 			// CSharpServiceManager.Register(new AgoraService());
 			#if CLOSE_UNITY_LOG
