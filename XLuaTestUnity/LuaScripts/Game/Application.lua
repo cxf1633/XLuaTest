@@ -89,6 +89,7 @@ function M:Init()
 
 	print("this is a print")
 	warn("this is a warn")
+	error("this is a error")
 end
 
 function M:OnBackPressed()

@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
-// using Extend;
-// using Extend.Common;
+using Extend;
+using Extend.Common;
 using UnityEngine;
 
 namespace XLua.LuaDLL {
@@ -125,7 +125,7 @@ namespace XLua.LuaDLL {
 		private static int PrintW(IntPtr L) {
 			var ret = CollectLog(L, out var s);
 #if UNITY_EDITOR
-			// Debug.LogWarning($"{s}\n{LuaVM.LogCallStack()}");
+			Debug.LogWarning($"{s}\n{LuaVM.LogCallStack()}");
 #else
 			Debug.LogWarning(s);
 #endif
@@ -135,7 +135,7 @@ namespace XLua.LuaDLL {
 		[MonoPInvokeCallback(typeof(lua_CSFunction))]
 		private static int PrintE(IntPtr L) {
 			var ret = CollectLog(L, out var s);
-			// Debug.LogError($"{s}\n{LuaVM.LogCallStack()}");
+			Debug.LogError($"{s}\n{LuaVM.LogCallStack()}");
 			return ret;
 		}
 #endif
