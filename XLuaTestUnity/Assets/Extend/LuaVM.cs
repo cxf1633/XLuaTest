@@ -139,10 +139,16 @@ namespace Extend {
 		public static bool LoadFromPersistent { get; set; }
 		private LuaTable m_bindingEnv;
 
+		/// <summary>
+		/// 在这里设置Lua文件的总入口
+		/// </summary>
+		/// <param name="filename"></param>
+		/// <param name="extension"></param>
+		/// <returns></returns>
 		private static byte[] LoadFile(ref string filename, string extension) {
 #if !LOAD_FROM_PACK
 			filename = filename.Replace('.', '/') + extension;
-			var path = $"{Application.dataPath}/../Lua/{filename}";
+			var path = $"{Application.dataPath}/../LuaScripts/{filename}";
 			if( File.Exists(path) ) {
 				var text = File.ReadAllText(path);
 				return Encoding.UTF8.GetBytes(text);
@@ -235,11 +241,11 @@ namespace Extend {
 
 			OnPreRequestLoaded?.Invoke();
 
-			LoadFileAtPath("base.LuaBindingBase");
+			// LoadFileAtPath("base.LuaBindingBase");
 #if UNITY_EDITOR
 			m_hotFixReload = moduleName => {
 				moduleName = moduleName.Replace('.', '/') + ".lua";
-				var path = $"{Application.dataPath}/../Lua/{moduleName}";
+				var path = $"{Application.dataPath}/../LuaScripts/{moduleName}";
 				if( File.Exists(path) ) {
 					var text = File.ReadAllText(path);
 					return Encoding.UTF8.GetBytes(text);

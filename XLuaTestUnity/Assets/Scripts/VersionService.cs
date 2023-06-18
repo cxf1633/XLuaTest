@@ -263,8 +263,6 @@ namespace CC
 			// CSharpServiceManager.Register(new RenderFeatureService());
 			// CSharpServiceManager.Register(new SpriteAssetService());
 			CSharpServiceManager.Register(new LuaVM());
-			var luaVM = CSharpServiceManager.Get<LuaVM>(CSharpServiceManager.ServiceType.LUA_SERVICE);
-			luaVM.DoString("print('hello world')");
 			// CSharpServiceManager.Register(new TickService());
 			// CSharpServiceManager.Register(new I18nService());
 			// CSharpServiceManager.Register(new SceneLoadManager());
