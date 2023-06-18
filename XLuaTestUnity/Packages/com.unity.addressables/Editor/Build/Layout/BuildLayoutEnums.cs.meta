@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:XiaoiceIslandTiledMap/Assets/Thirds/uLipSync/Editor/AudioUtil.cs.meta
+guid: 346910667c0381341af6fd3c74405e2b
+========
+guid: 1d660cd53240140bd9d3975354f1fae0
+>>>>>>>> release/release_2.0.1:XiaoiceIslandTiledMap/Packages/com.unity.addressables/Editor/Build/Layout/BuildLayoutEnums.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

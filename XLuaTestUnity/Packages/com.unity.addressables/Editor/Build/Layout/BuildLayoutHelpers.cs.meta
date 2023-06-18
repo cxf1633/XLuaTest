@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:XiaoiceIslandTiledMap/Assets/Thirds/uLipSync/Editor/BakedDataEditor.cs.meta
+guid: f52b249f6a615bc4baca90ce3418d5e5
+========
+guid: ac62285cba7c64612b59f2c0c4124c96
+>>>>>>>> release/release_2.0.1:XiaoiceIslandTiledMap/Packages/com.unity.addressables/Editor/Build/Layout/BuildLayoutHelpers.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

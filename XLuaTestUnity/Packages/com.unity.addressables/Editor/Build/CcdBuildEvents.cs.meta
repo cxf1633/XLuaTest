@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:XiaoiceIslandTiledMap/Packages/com.unity.render-pipelines.universal/Runtime/MotionVectors.cs.meta
+guid: 798cb3c2dc11edf4ca0e60055ce53688
+========
+guid: 49f93c268e0343869a5a30defb8e5d51
+>>>>>>>> release/release_2.0.1:XiaoiceIslandTiledMap/Packages/com.unity.addressables/Editor/Build/CcdBuildEvents.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
