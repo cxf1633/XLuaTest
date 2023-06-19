@@ -1,6 +1,6 @@
 ---@class Game.Application
 local M = class()
--- local SM = require("ServiceManager")
+local SM = require("ServiceManager")
 -- local MockLoginState = require("Game.State.MockLoginState")
 -- local LandingState = require("Game.State.LandingState")
 -- local ChangeClothState = require("Game.State.ChangeCloth.ChangeClothState")
@@ -25,7 +25,7 @@ _APP_NATIVE_VERSION = "2.3.0"
 -- local CoroutineAssetLoader = require("base.asset.CoroutineAssetLoader")
 
 function M:ctor()
-	-- _APP = self
+	_APP = self
 	-- _APP.native = GV.NATIVE
 	-- _APP.prod = GV.PROD
 	-- _APP.platform = GV.PLATFORM

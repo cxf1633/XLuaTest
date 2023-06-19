@@ -17,7 +17,7 @@ function Global_DebugFunction(lua)
 	return tostring(ret)
 end
 
--- local SM = require "ServiceManager"
+local SM = require "ServiceManager"
 -- local ConfigService = require "ConfigService"
 -- local TS = require "TickService"
 
