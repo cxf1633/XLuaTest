@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Extend;
-// using Extend.Asset;
+using Extend.Asset;
 using Extend.Common;
-// using Extend.DebugUtil;
+using Extend.DebugUtil;
+using Extend.Services;
+// using Extend.SceneManagement;
 // using Extend.LuaUtil;
 // using Extend.Network;
 // using Extend.Network.HttpClient;
@@ -19,10 +21,6 @@ using Extend.Common;
 // using UnityEngine.AddressableAssets;
 // using UnityEngine.Rendering;
 // using UnityEngine.Rendering.Universal;
-// using XiaoIceIsland.Agora;
-// using XiaoIceland.Audio;
-// using XiaoIceland.Network;
-// using XiaoIceland.Update;
 using XLua;
 using Object = UnityEngine.Object;
 
@@ -265,7 +263,7 @@ namespace CC
 			CSharpServiceManager.Register(new LuaVM());
 			// CSharpServiceManager.Register(new TickService());
 			// CSharpServiceManager.Register(new I18nService());
-			// CSharpServiceManager.Register(new SceneLoadManager());
+			CSharpServiceManager.Register(new SceneLoadManager());
 
 			// var mode = GameSystemSetting.Get().SystemSetting.GetString("GAME", "Mode");
 			// if (mode != "Shipping")
@@ -358,9 +356,9 @@ namespace CC
 			
 			CSharpServiceManager.Shutdown();
 			CSharpServiceManager.Initialize();
-			// CSharpServiceManager.Register(new ErrorLogToFile());
-			// CSharpServiceManager.Register(new StatService());
-			// CSharpServiceManager.Register(new AssetService());
+			CSharpServiceManager.Register(new ErrorLogToFile());
+			CSharpServiceManager.Register(new StatService());
+			CSharpServiceManager.Register(new AssetService());
 			// CSharpServiceManager.Register(new GameSystemSetting());
 			// CSharpServiceManager.Register(new DownLoadService());
 			// CSharpServiceManager.Register(new AgoraService());

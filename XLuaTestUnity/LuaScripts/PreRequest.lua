@@ -22,7 +22,7 @@ local SM = require "ServiceManager"
 -- local TS = require "TickService"
 
 -- local CmdService = require("CommandService")
--- local UIService = require "UI.UIService"
+local UIService = require "UI.UIService"
 -- local GlobalVMService = require "mvvm.GlobalVMService"
 -- local MockService = require("base.MockService")
 -- local EventBindingService = require("base.EventBindingService")
@@ -47,7 +47,7 @@ local SM = require "ServiceManager"
 local app
 return {
 	init = function()
-		-- SM.RegisterService(SM.SERVICE_TYPE.UI, UIService)
+		SM.RegisterService(SM.SERVICE_TYPE.UI, UIService)
 		--	require("ConfigServicePostProcess")
 		
 		-- Unity

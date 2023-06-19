@@ -5,7 +5,7 @@ using UnityEngine.Rendering.Universal;
 using XLua;
 #endif
 // using DG.Tweening;
-// using Extend.Asset;
+using Extend.Asset;
 using Extend.Common;
 using Extend.DebugUtil;
 // using Extend.LuaUtil;
@@ -25,8 +25,8 @@ namespace Extend {
 		private static void OnInitAssembliesLoaded() {
 			CSharpServiceManager.Initialize();
 			CSharpServiceManager.Register(new ErrorLogToFile());
-			// CSharpServiceManager.Register(new StatService());
-			// CSharpServiceManager.Register(new AssetService());
+			CSharpServiceManager.Register(new StatService());
+			CSharpServiceManager.Register(new AssetService());
 			// CSharpServiceManager.Register(new GameSystemSetting());
 			// CSharpServiceManager.Register(new DownLoadService());
 			// CSharpServiceManager.Register(new AgoraService());

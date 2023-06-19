@@ -1,7 +1,7 @@
 ---@class Game.Application
 local M = class()
 local SM = require("ServiceManager")
--- local MockLoginState = require("Game.State.MockLoginState")
+local MockLoginState = require("Game.State.MockLoginState")
 -- local LandingState = require("Game.State.LandingState")
 -- local ChangeClothState = require("Game.State.ChangeCloth.ChangeClothState")
 -- local SEDService = require("Game.Network.ServerEndData.ServerEndDataService")
@@ -80,7 +80,7 @@ function M:Init()
 
 	-- local native = CS.XiaoIceland.NativeManager.NATIVE
 	-- if (not native) then
-		-- self:Switch(MockLoginState.new())
+		self:Switch(MockLoginState.new())
 	-- end
 
 	-- local service = SM.GetService(SM.SERVICE_TYPE.TICK)
@@ -305,7 +305,7 @@ function M:Switch(state, ...)
 	end
 
 	local param = table.pack(...)
-	self:Dispatch(EventType.ON_SCENE_UNLOAD)
+	-- self:Dispatch(EventType.ON_SCENE_UNLOAD)
 	-- self.loading:Show()
 	self:_PerformSwitch(state, param)
 end
