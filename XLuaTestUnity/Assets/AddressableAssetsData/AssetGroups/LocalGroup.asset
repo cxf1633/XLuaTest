@@ -17,9 +17,34 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 120be596de091a94996172bbd994df13
   m_SerializeEntries:
+  - m_GUID: ca988694c1ddd7445b4e113620394645
+    m_Address: Assets/Res/Prefabs/MockLogin.prefab
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cee231e1b106af8408604c58092f9bc3
+    m_Address: Assets/Res/Prefabs
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0abe41a782157c5468b5fcc948fbfa9a
+    m_Address: Assets/Res
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b303105a4b549c4197117b52c4c139f
+    m_Address: Assets/Res/Prefabs/UILayers.prefab
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae22d9a6edab6fb408bba98a669c5e6d
+    m_Address: Assets/Res/Texture
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 182d37b4b0fd387428e7c6533ed50e56
     m_Address: Assets/Res/Texture/xiaogong.png
-    m_ReadOnly: 0
+    m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0

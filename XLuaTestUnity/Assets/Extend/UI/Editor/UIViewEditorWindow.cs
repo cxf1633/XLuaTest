@@ -202,7 +202,7 @@ namespace Extend.UI.Editor {
 		}
 	
 		public void ToLua() {
-			using(var luaFileStream = new FileStream("Lua/UIViewConfiguration.lua", FileMode.Create, FileAccess.Write))
+			using(var luaFileStream = new FileStream("LuaScripts/UIViewConfiguration.lua", FileMode.Create, FileAccess.Write))
 			using( var writer = new StreamWriter(luaFileStream) ) {
 				writer.WriteLine("local Configuration = CS.Extend.UI.UIViewConfiguration.Configuration");
 				writer.WriteLine("local AssetReference = CS.Extend.Asset.AssetReference");
