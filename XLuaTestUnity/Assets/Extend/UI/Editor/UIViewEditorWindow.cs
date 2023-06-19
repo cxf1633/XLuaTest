@@ -243,7 +243,7 @@ namespace Extend.UI.Editor {
 		private bool refreshFlag;
 		private SearchField m_searchField;
 	
-		[MenuItem("Window/UIView Window")]
+		[MenuItem("Tools/UIView Window")]
 		private static void OpenWindow() {
 			if( window ) {
 				window.Close();
