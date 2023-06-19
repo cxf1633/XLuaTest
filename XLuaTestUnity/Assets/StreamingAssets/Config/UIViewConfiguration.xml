@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configurations>
+  <UIView Name="MockLogin" UIView="ca988694c1ddd7445b4e113620394645" BackgroundFx="" FullScreen="0" Transition="" AttachLayer="Dialog" CloseMethod="None" CloseButtonPath="" FrameRate="60" />
+</Configurations>
