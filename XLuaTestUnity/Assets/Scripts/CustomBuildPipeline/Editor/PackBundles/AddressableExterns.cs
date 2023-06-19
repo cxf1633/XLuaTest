@@ -12,7 +12,7 @@ public class AddressableExterns
 	[UnityEditor.InitializeOnLoadMethod]
 	public static void InitFunc()
 	{
-		Debug.Log("init aaMap");
+		// Debug.Log("init aaMap");
 		_mapFilePath = Application.dataPath + "/AddressableAssetsData/aaMap.json";
 		_aaMap = new Dictionary<string, string>();
 		LoadMap();
