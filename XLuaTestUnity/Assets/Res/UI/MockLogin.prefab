@@ -412,7 +412,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BindingOptions:
-    Options: []
+    Options:
+    - BindTarget: {fileID: 3705247041413759551}
+      BindTargetProp: text
+      Mode: 1
+      Path: account
+      m_expression: 0
+    - BindTarget: {fileID: 4391029323554931840}
+      BindTargetProp: text
+      Mode: 3
+      Path: password
+      m_expression: 0
   ExtraInfo: 
 --- !u!225 &1190069588304717662
 CanvasGroup:

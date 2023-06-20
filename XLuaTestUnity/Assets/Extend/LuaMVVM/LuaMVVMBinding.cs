@@ -5,7 +5,7 @@ using XLua;
 namespace Extend.LuaMVVM {
 	[LuaCallCSharp]
 	public class LuaMVVMBinding : MonoBehaviour, ILuaMVVM {
-		[BlackList]
+		[LuaMVVMBindOptions, BlackList]
 		public LuaMVVMBindingOptions BindingOptions;
 
 		[TextArea(3, 5)]
