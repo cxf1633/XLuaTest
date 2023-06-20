@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Extend.Common {
+namespace Extend.Editor {
 	public interface IExtendAttribute {
 		
 	}
@@ -100,9 +100,5 @@ namespace Extend.Common {
 			PreviewBehaviour = previewBehaviour;
 			IncludeChildNode = includeChildNode;
 		}
-	}
-	
-	public class LuaFileAttribute : PropertyAttribute {
-		
 	}
 }
