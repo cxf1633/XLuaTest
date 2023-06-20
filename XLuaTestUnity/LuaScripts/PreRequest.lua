@@ -25,7 +25,7 @@ local SM = require "ServiceManager"
 local UIService = require "UI.UIService"
 -- local GlobalVMService = require "mvvm.GlobalVMService"
 -- local MockService = require("base.MockService")
--- local EventBindingService = require("base.EventBindingService")
+local EventBindingService = require("base.EventBindingService")
 -- local GlobalEventDispatcher = require("base.GlobalEventDispatcher")
 -- local ServerEndDataService = require("Game.Network.ServerEndData.ServerEndDataService")
 -- local binding = require("mvvm.binding")
@@ -38,7 +38,7 @@ local UIService = require "UI.UIService"
 -- SM.RegisterService(SM.SERVICE_TYPE.CONSOLE_COMMAND, CmdService)
 -- SM.RegisterService(SM.SERVICE_TYPE.GLOBAL_VM, GlobalVMService)
 -- SM.RegisterService(SM.SERVICE_TYPE.MOCK, MockService)
--- SM.RegisterService(SM.SERVICE_TYPE.EVENT_BINDING, EventBindingService)
+SM.RegisterService(SM.SERVICE_TYPE.EVENT_BINDING, EventBindingService)
 -- SM.RegisterService(SM.SERVICE_TYPE.GLOBAL_EVENT, GlobalEventDispatcher)
 -- SM.RegisterService(SM.SERVICE_TYPE.SERVER_END_DATA, ServerEndDataService)
 -- SM.RegisterService(SM.SERVICE_TYPE.NATIVE, NativeService)

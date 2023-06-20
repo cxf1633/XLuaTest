@@ -1,7 +1,7 @@
 local LuaBindingBase = require("base.LuaBindingBase")
-local binding = require("mvvm.binding")
-local LuaMVVMBindingType = typeof(CS.Extend.LuaMVVM.LuaMVVMBinding)
-local ConfigService = require "ConfigService"
+-- local binding = require("mvvm.binding")
+-- local LuaMVVMBindingType = typeof(CS.Extend.LuaMVVM.LuaMVVMBinding)
+-- local ConfigService = require "ConfigService"
 ---@class UI.MockLogin : LuaBinding
 local M = class(LuaBindingBase)
 

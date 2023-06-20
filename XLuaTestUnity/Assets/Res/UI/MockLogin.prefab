@@ -313,6 +313,9 @@ GameObject:
   - component: {fileID: 718508721513770950}
   - component: {fileID: 2058725837278391158}
   - component: {fileID: 4731745626914731273}
+  - component: {fileID: 2459254720515829033}
+  - component: {fileID: 1190069588304717662}
+  - component: {fileID: 1748847410268494002}
   m_Layer: 5
   m_Name: MockLogin
   m_TagString: Untagged
@@ -396,6 +399,182 @@ MonoBehaviour:
   LuaData: []
   references:
     version: 1
+--- !u!114 &2459254720515829033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955939252402430001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba3b0fe570c430188239195c8e7d2bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BindingOptions:
+    Options: []
+  ExtraInfo: 
+--- !u!225 &1190069588304717662
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955939252402430001}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1748847410268494002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955939252402430001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936e129f5e664df88b7a8ad90953e0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ControlInteractable: 1
+  ShowAnimation:
+    Mode: 1
+    m_enabled: 0
+    m_state:
+      Move:
+        m_delay: 0
+        m_duration: 1
+        m_ease: 1
+        m_active: 0
+        m_customFromTo: 0
+        m_moveTo: {x: 0, y: 0, z: 0}
+        m_moveFrom: {x: 0, y: 0, z: 0}
+        m_moveInDirection: 0
+      Rotate:
+        m_delay: 0
+        m_duration: 1
+        m_ease: 1
+        m_active: 0
+        m_customFromTo: 0
+        m_rotateFrom: {x: 0, y: 0, z: 0}
+        m_rotateTo: {x: 0, y: 0, z: 0}
+        m_rotateMode: 0
+      Scale:
+        m_delay: 0
+        m_duration: 1
+        m_ease: 1
+        m_active: 0
+        m_scaleFrom: {x: 0, y: 0, z: 0}
+        m_customFromTo: 0
+        m_scaleTo: {x: 0, y: 0, z: 0}
+      Fade:
+        m_delay: 0
+        m_duration: 1
+        m_ease: 1
+        m_active: 0
+        m_fadeFrom: 0
+        m_customFromTo: 0
+        m_fadeTo: 0
+    m_processor:
+      m_ani: {fileID: 0}
+      m_paramValue:
+        NameHash: 0
+        fV: 0
+        iV: 0
+        bV: 0
+  HideAnimation:
+    Mode: 1
+    m_enabled: 0
+    m_state:
+      Move:
+        m_delay: 0
+        m_duration: 1
+        m_ease: 1
+        m_active: 0
+        m_customFromTo: 0
+        m_moveTo: {x: 0, y: 0, z: 0}
+        m_moveFrom: {x: 0, y: 0, z: 0}
+        m_moveOutDirection: 0
+      Rotate:
+        m_delay: 0
+        m_duration: 1
+        m_ease: 1
+        m_active: 0
+        m_customFromTo: 0
+        m_rotateFrom: {x: 0, y: 0, z: 0}
+        m_rotateTo: {x: 0, y: 0, z: 0}
+        m_rotateMode: 0
+      Scale:
+        m_delay: 0
+        m_duration: 1
+        m_ease: 1
+        m_active: 0
+        m_scaleFrom: {x: 0, y: 0, z: 0}
+        m_customFromTo: 0
+        m_scaleTo: {x: 0, y: 0, z: 0}
+      Fade:
+        m_delay: 0
+        m_duration: 1
+        m_ease: 1
+        m_active: 0
+        m_fadeFrom: 0
+        m_customFromTo: 0
+        m_fadeTo: 0
+    m_processor:
+      m_ani: {fileID: 0}
+      m_paramValue:
+        NameHash: 0
+        fV: 0
+        iV: 0
+        bV: 0
+  LoopAnimation:
+    Mode: 1
+    m_enabled: 0
+    m_state:
+      Move:
+        m_delay: 0
+        m_duration: 1
+        m_ease: 1
+        m_active: 0
+        m_loops: -1
+        m_loopType: 0
+        m_moveBy: {x: 0, y: 0, z: 0}
+      Rotate:
+        m_delay: 0
+        m_duration: 1
+        m_ease: 1
+        m_active: 0
+        m_loops: -1
+        m_loopType: 0
+        m_rotateBy: {x: 0, y: 0, z: 0}
+        m_rotateMode: 0
+      Scale:
+        m_delay: 0
+        m_duration: 1
+        m_ease: 1
+        m_active: 0
+        m_loops: -1
+        m_loopType: 0
+        m_scaleFrom: {x: 0, y: 0, z: 0}
+        m_scaleTo: {x: 0, y: 0, z: 0}
+      Fade:
+        m_delay: 0
+        m_duration: 1
+        m_ease: 1
+        m_active: 0
+        m_loops: -1
+        m_loopType: 0
+        m_from: 0
+        m_to: 0
+    m_processor:
+      m_ani: {fileID: 0}
+      m_paramValue:
+        NameHash: 0
+        fV: 0
+        iV: 0
+        bV: 0
 --- !u!1 &2194473376283381381
 GameObject:
   m_ObjectHideFlags: 0

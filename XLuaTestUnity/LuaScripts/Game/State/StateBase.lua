@@ -24,7 +24,7 @@ end
 
 function M:PrepareExit()
 	AssetService.Recycle(self.loaderGO)
-	self.loaderRef:Dispose()
+	-- self.loaderRef:Dispose()
 end
 
 ---@return Game.State.StateLifeTimeLoader

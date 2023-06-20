@@ -101,4 +101,9 @@ namespace Extend.Editor {
 			IncludeChildNode = includeChildNode;
 		}
 	}
+	
+	public class LuaMVVMBindOptionsAttribute : PropertyAttribute {
+		
+	}
+	
 }
