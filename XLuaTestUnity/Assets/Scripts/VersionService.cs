@@ -19,17 +19,13 @@ using Extend.Services;
 // using Newtonsoft.Json;
 // using Newtonsoft.Json.Linq;
 // using UnityEngine.AddressableAssets;
-// using UnityEngine.Rendering;
-// using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using XLua;
 using Object = UnityEngine.Object;
 
 namespace CC
 {
-	/*
-	 * @brief	（简要描述）
-	 * @details	对该文档的详细说明和解释，可以换行
-	 */
 	[LuaCallCSharp]
 	public class VersionService
 	{
@@ -264,7 +260,6 @@ namespace CC
 			// CSharpServiceManager.Register(new TickService());
 			// CSharpServiceManager.Register(new I18nService());
 			CSharpServiceManager.Register(new SceneLoadManager());
-
 			// var mode = GameSystemSetting.Get().SystemSetting.GetString("GAME", "Mode");
 			// if (mode != "Shipping")
 			// {
@@ -286,39 +281,40 @@ namespace CC
 #if !UNITY_EDITOR
 			var builder = new StringBuilder(2048);
 			builder.AppendLine($"Unity: {Application.unityVersion}");
-			builder.AppendLine($"App : {Application.identifier}:{Application.version} {Application.platform}");
+			builder.AppendLine($"App : {Application.identifier}, {Application.version}, {Application.platform}");
 			builder.AppendLine($"Device : {SystemInfo.deviceModel}, {SystemInfo.deviceName}, {SystemInfo.deviceType}");
+			//电量信息 Charging 充电中
 			builder.AppendLine($"Battery : {SystemInfo.batteryStatus}, {SystemInfo.batteryLevel:0.00}");
-			builder.AppendLine(
-				$"Processor : {SystemInfo.processorType}, {SystemInfo.processorCount}, {SystemInfo.processorFrequency}");
-			builder.AppendLine($"Graphics : {SystemInfo.graphicsDeviceName}, {SystemInfo.graphicsDeviceType}, " +
-			                   $"{SystemInfo.graphicsDeviceVendor}, {SystemInfo.graphicsDeviceVersion}, " +
-			                   $"GMEM : {SystemInfo.graphicsMemorySize}, SM{SystemInfo.graphicsShaderLevel}");
-
-			builder.AppendLine(
-				$"OS : {SystemInfo.operatingSystem}, MEM : {SystemInfo.systemMemorySize}, {SystemInfo.operatingSystemFamily}");
+			builder.AppendLine($"Processor : {SystemInfo.processorType}, {SystemInfo.processorCount}, {SystemInfo.processorFrequency}");
+			//显卡信息
+			builder.AppendLine($"Graphics : {SystemInfo.graphicsDeviceName}, DeviceType : {SystemInfo.graphicsDeviceType}," +
+			                   $"Vendor : {SystemInfo.graphicsDeviceVendor}, DeviceVersion : {SystemInfo.graphicsDeviceVersion}," +
+			                   $"GMEM : {SystemInfo.graphicsMemorySize}, SM : {SystemInfo.graphicsShaderLevel}");
+			
+			builder.AppendLine($"OS : {SystemInfo.operatingSystem}, MEM : {SystemInfo.systemMemorySize}, {SystemInfo.operatingSystemFamily}");
 			builder.AppendLine("UsesReversedZBuffer : " + SystemInfo.usesReversedZBuffer);
-			builder.Append(
-				$"NPOT support : {SystemInfo.npotSupport}, Instancing support : {SystemInfo.supportsInstancing}, Texture Size : {SystemInfo.maxTextureSize}, " +
-				$"Compute : {SystemInfo.supportsComputeShaders}");
+			builder.Append($"NPOT support : {SystemInfo.npotSupport}, Instancing support : {SystemInfo.supportsInstancing}, " +
+			               $"Texture Size : {SystemInfo.maxTextureSize}, Compute : {{SystemInfo.supportsComputeShaders}}");
+			
 			Debug.LogWarning(builder.ToString());
 
+			//从Lua获取画面品质
+			Debug.LogWarning("1111111111");
 			var luaVm = CSharpServiceManager.Get<LuaVM>(CSharpServiceManager.ServiceType.LUA_SERVICE);
+			Debug.LogWarning("22222");
 			var qualitySelector = luaVm.Global.Get<LuaFunction>("Global_QualitySelector");
-			var quality =
-				qualitySelector.Func<int, string, string>(SystemInfo.processorFrequency, SystemInfo.graphicsDeviceName);
-
-			var urpAssetRef =
-				AssetService.Get()
-					.Load<UniversalRenderPipelineAsset>(
-						$"Assets/Settings/UniversalRenderPipelineAsset_{quality}.asset");
+			Debug.LogWarning("33333");
+			var quality = qualitySelector.Func<int, string, string>(SystemInfo.processorFrequency, SystemInfo.graphicsDeviceName);
+			Debug.LogWarning("quality = " + quality.ToString());
+			
+			//根据品质获取不同的渲染管线
+			var urpAssetRef = AssetService.Get().Load<UniversalRenderPipelineAsset>($"Assets/Settings/UniversalRenderPipelineAsset_{quality}.asset");
 			var urpAsset = urpAssetRef.GetObject() as UniversalRenderPipelineAsset;
-			;
+			
 			GraphicsSettings.renderPipelineAsset = urpAsset;
 			QualitySettings.renderPipeline = urpAsset;
 
-			var gameIniSystem =
-				CSharpServiceManager.Get<GameSystemSetting>(CSharpServiceManager.ServiceType.GAME_SYSTEM_SERVICE);
+			var gameIniSystem = CSharpServiceManager.Get<GameSystemSetting>(CSharpServiceManager.ServiceType.GAME_SYSTEM_SERVICE);
 			var systemSetting = gameIniSystem.SystemSetting;
 
 			if (Application.isMobilePlatform)

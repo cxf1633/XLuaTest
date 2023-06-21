@@ -100,9 +100,12 @@ end
 
 
 function M:OnGuideClicked()
-	local info, isOwner, islandId = self:BuildLoginInfo()
-	_APP:UpdateInfo(info)
-	_APP:Landing({ isNew = "true", islandId = islandId, isOwner = "true", qualityLevel = "1", sceneName = "BeginnerGuide" })
+	-- local info, isOwner, islandId = self:BuildLoginInfo()
+	-- _APP:UpdateInfo(info)
+	-- _APP:Landing({ isNew = "true", islandId = islandId, isOwner = "true", qualityLevel = "1", sceneName = "BeginnerGuide" })
+	print("this is a print")
+	warn("this is a warn")
+	error("this is a error")
 end
 
 function M:OnShowPanelClicked()

@@ -27,7 +27,7 @@ namespace Extend {
 			CSharpServiceManager.Register(new ErrorLogToFile());
 			CSharpServiceManager.Register(new StatService());
 			CSharpServiceManager.Register(new AssetService());
-			// CSharpServiceManager.Register(new GameSystemSetting());
+			CSharpServiceManager.Register(new GameSystemSetting());
 			// CSharpServiceManager.Register(new DownLoadService());
 			// CSharpServiceManager.Register(new AgoraService());
 			#if CLOSE_UNITY_LOG

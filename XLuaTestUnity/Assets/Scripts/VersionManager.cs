@@ -5,7 +5,7 @@ using System.Collections.Generic;
 // using Newtonsoft.Json.Linq;
 using TMPro;
 using UnityEngine;
-// using UnityEngine.AddressableAssets;
+using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 // using XiaoIceland;
 // using XiaoIceland.Service;
@@ -198,12 +198,12 @@ return;
 		// 	}
 		// }
 		//
-		// private IEnumerator EnterFullpackage()
-		// {
-		// 	var init = Addressables.InitializeAsync();
-		// 	yield return init;
-		// 	EnterGame("FullPackage");
-		// }
+		private IEnumerator EnterFullpackage()
+		{
+			var init = Addressables.InitializeAsync();
+			yield return init;
+			EnterGame("FullPackage");
+		}
 		
 		// private bool CheckAllOperation()
 		// {

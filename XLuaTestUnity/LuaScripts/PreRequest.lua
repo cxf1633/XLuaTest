@@ -1,5 +1,5 @@
 require("util")
--- require("QualitySelect")
+require("QualitySelect")
 
 function Global_ShowLogFile()
 	local path = CS.UnityEngine.Application.persistentDataPath .. "/error.log"
