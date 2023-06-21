@@ -1,5 +1,19 @@
 {
   "dependencies": {
+    "com.littlebigfun.addressable-importer": {
+      "version": "file:com.littlebigfun.addressable-importer",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.addressables": "1.1.5"
+      }
+    },
+    "com.oddworm.addressablesbuildlayoutexplorer": {
+      "version": "file:com.oddworm.addressablesbuildlayoutexplorer",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.addressables": {
       "version": "file:com.unity.addressables",
       "depth": 0,
@@ -66,6 +80,13 @@
       "dependencies": {},
       "url": "https://packages.unity.cn"
     },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.1.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.cn"
+    },
     "com.unity.render-pipelines.core": {
       "version": "10.10.1",
       "depth": 1,
@@ -110,6 +131,12 @@
         "com.unity.searcher": "4.3.2"
       },
       "url": "https://packages.unity.cn"
+    },
+    "com.unity.sharp-zip-lib": {
+      "version": "file:com.unity.sharp-zip-lib",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.unity.test-framework": {
       "version": "1.1.33",
