@@ -11,7 +11,7 @@ namespace Extend.Asset {
 		internal override void Recycle() {
 			transform.SetParent(null);
 			Destroy(gameObject);
-			// Addressables.ReleaseInstance(gameObject);
+			Addressables.ReleaseInstance(gameObject);
 			base.Recycle();
 		}
 	}

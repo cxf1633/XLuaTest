@@ -415,12 +415,12 @@ MonoBehaviour:
     Options:
     - BindTarget: {fileID: 3705247041413759551}
       BindTargetProp: text
-      Mode: 1
+      Mode: 0
       Path: account
       m_expression: 0
     - BindTarget: {fileID: 4391029323554931840}
       BindTargetProp: text
-      Mode: 3
+      Mode: 0
       Path: password
       m_expression: 0
   ExtraInfo: 
@@ -740,6 +740,7 @@ GameObject:
   - component: {fileID: 2935380104279032668}
   - component: {fileID: 968945626667322242}
   - component: {fileID: 2330902016377399228}
+  - component: {fileID: 3737927765836487473}
   m_Layer: 5
   m_Name: LogIn
   m_TagString: Untagged
@@ -849,6 +850,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3737927765836487473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777077018826386239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb6b7627508449bb09d57448a50555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_clickEvent:
+  - Function:
+      Binding: {fileID: 4731745626914731273}
+      LuaMethodName: OnLoginClicked
+    Param:
+      Int: 0
+      Float: 0
+      Str: 
+      AssetRef:
+        m_assetRef:
+          m_AssetGUID: 
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+      Type: 0
 --- !u!1 &5861481942036746814
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 local LuaBindingBase = require("base.LuaBindingBase")
--- local binding = require("mvvm.binding")
--- local LuaMVVMBindingType = typeof(CS.Extend.LuaMVVM.LuaMVVMBinding)
+local binding = require("mvvm.binding")
+local LuaMVVMBindingType = typeof(CS.Extend.LuaMVVM.LuaMVVMBinding)
 -- local ConfigService = require "ConfigService"
 ---@class UI.MockLogin : LuaBinding
 local M = class(LuaBindingBase)
@@ -43,14 +43,15 @@ function M:start()
 	-- mvvm:SetDataContext(context)
 
 	print("MockLogin")
-	-- local context = binding.build({
-	-- 	data = {
-	-- 		btnLabel = "",
-	-- 	}
-	-- })
-	-- self.context = context
-	-- local mvvm = self.__CSBinding:GetComponent(LuaMVVMBindingType)
-	-- mvvm:SetDataContext(context)
+	local context = binding.build({
+		data = {
+			account = "",
+			password = ""
+		}
+	})
+	self.context = context
+	local mvvm = self.__CSBinding:GetComponent(LuaMVVMBindingType)
+	mvvm:SetDataContext(context)
 end
 
 function M:BuildLoginInfo()
@@ -93,7 +94,8 @@ function M:OnLoginClicked()
 	-- _APP:Landing({ isNew = "false", isOwner = isOwner, islandId = islandId, qualityLevel = "1" })
 
 	print("OnLoginClicked")
-	self.context.btnLabel= "alkj"
+	self.context.account= "nihao"
+	self.context.password= "mima"
 end
 
 
