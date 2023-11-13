@@ -2,8 +2,8 @@
 local M = class()
 local SM = require("ServiceManager")
 local MockLoginState = require("Game.State.MockLoginState")
--- local LandingState = require("Game.State.LandingState")
--- local ChangeClothState = require("Game.State.ChangeCloth.ChangeClothState")
+--local LandingState = require("Game.State.LandingState")
+local ChangeClothState = require("Game.State.ChangeCloth.ChangeClothState")
 -- local SEDService = require("Game.Network.ServerEndData.ServerEndDataService")
 -- local ns = SM.GetService(SM.SERVICE_TYPE.NATIVE)
 -- local UIService = SM.GetService(SM.SERVICE_TYPE.UI)
@@ -130,21 +130,21 @@ function M:Landing(info)
 		if info["sceneName"] == "ChangeCloth" then
 			_APP:Switch(ChangeClothState.new(), account)
 			return
-		elseif info["sceneName"] == "BeginnerGuide" then
-			island.isNew = true
-			account.guide = true
-			_APP.playerInitState = "BeginnerGuideState"
-			local welcomeBankPath = SM.GetConfigService().PathForFile("LoadWelcomeBank.prefab")
-			local welcomeBankRef = AssetService.Get():LoadGameObject(welcomeBankPath)
-			self.welcomeBankGO = welcomeBankRef:Instantiate()
-			CS.UnityEngine.GameObject.DontDestroyOnLoad(self.welcomeBankGO)
-			welcomeBankRef:Dispose()
-			_APP:Switch(ChangeClothState.new(), account)
-			return
+		--elseif info["sceneName"] == "BeginnerGuide" then
+		--	island.isNew = true
+		--	account.guide = true
+		--	_APP.playerInitState = "BeginnerGuideState"
+		--	local welcomeBankPath = SM.GetConfigService().PathForFile("LoadWelcomeBank.prefab")
+		--	local welcomeBankRef = AssetService.Get():LoadGameObject(welcomeBankPath)
+		--	self.welcomeBankGO = welcomeBankRef:Instantiate()
+		--	CS.UnityEngine.GameObject.DontDestroyOnLoad(self.welcomeBankGO)
+		--	welcomeBankRef:Dispose()
+		--	_APP:Switch(ChangeClothState.new(), account)
+		--	return
 		end
-		SM.GetNativeService().Track("LoadingIslandTrigger", {scenario_type = island.owner and "登岛" or "出访"})
+		--SM.GetNativeService().Track("LoadingIslandTrigger", {scenario_type = island.owner and "登岛" or "出访"})
 	end
-	self:Switch(LandingState.new())
+	--self:Switch(LandingState.new())
 end
 
 local CheckUpdateType = CS.XiaoIceland.Service.VersionService.HasAnyUpdate

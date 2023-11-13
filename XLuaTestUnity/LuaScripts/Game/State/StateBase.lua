@@ -1,15 +1,15 @@
 ---@class Game.State.StateBase
 local M = class()
 local AssetService = CS.Extend.Asset.AssetService
--- local StateLifeTimeLoader = require("Game.State.StateLifeTimeLoader")
+local StateLifeTimeLoader = require("Game.State.StateLifeTimeLoader")
 
 function M:PrepareEnter()
-	-- self.loaderRef = AssetService.Get():LoadGameObject("StateLifeTimeLoader.prefab")
-	-- self.loaderGO = self.loaderRef:Instantiate()
-	-- self.loaderGO.name = "State-Loader"
-	-- CS.UnityEngine.Object.DontDestroyOnLoad(self.loaderGO)
-	-- self.loader = self.loaderGO:GetLuaBinding(StateLifeTimeLoader)
-	-- self.exitRecycleGO = {}
+	self.loaderRef = AssetService.Get():LoadGameObject("StateLifeTimeLoader.prefab")
+	self.loaderGO = self.loaderRef:Instantiate()
+	self.loaderGO.name = "State-Loader"
+	CS.UnityEngine.Object.DontDestroyOnLoad(self.loaderGO)
+	self.loader = self.loaderGO:GetLuaBinding(StateLifeTimeLoader)
+	self.exitRecycleGO = {}
 end
 
 function M:Enter()

@@ -41,8 +41,7 @@ function M:start()
 	-- self.context = context
 	-- local mvvm = self.__CSBinding:GetComponent(LuaMVVMBindingType)
 	-- mvvm:SetDataContext(context)
-
-	print("MockLogin")
+	
 	local context = binding.build({
 		data = {
 			account = "",
@@ -93,9 +92,46 @@ function M:OnLoginClicked()
 	-- _APP:UpdateInfo(info)
 	-- _APP:Landing({ isNew = "false", isOwner = isOwner, islandId = islandId, qualityLevel = "1" })
 
-	print("OnLoginClicked")
-	self.context.account= "nihao"
-	self.context.password= "mima"
+	--print("OnLoginClicked")
+	--self.context.account= "nihao"
+	--self.context.password= "mima"
+
+	--local info, isOwner, islandId = self:BuildLoginInfo()
+	--_APP:UpdateInfo(info)
+	-- _APP:Landing({ isNew = "false", islandId = islandId, isOwner = "true", qualityLevel = "1", sceneName = "ChangeCloth" })
+
+
+
+	local path = "Assets/Res/Prefabs/Avatar/Player/RemotePlayer.prefab"
+
+	self.LoadPlayer(nil, path);
+end
+
+local Player
+local loadContext
+
+function M.LoadPlayer(faceConfig, path, callback)
+	local state = _APP:GetCurrentState()
+	local loader = state:GetStateLoader()
+	if loadContext then
+		loadContext.cancel = true
+	end
+	loadContext = loader:LoadGameObjectAsync(path, function (go)
+		loadContext = nil
+		Player = go
+		-- M.GetFaceDataJson(faceConfig.facedata, function (text)
+		-- 	if callback then
+		-- 		callback(go, text)
+		-- 	end
+		-- end)
+	end, true)
+end
+
+function M.ClearPlayer()
+	if Player then
+		CS.Extend.Asset.AssetService.Recycle(Player)
+		Player = nil
+	end
 end
 
 

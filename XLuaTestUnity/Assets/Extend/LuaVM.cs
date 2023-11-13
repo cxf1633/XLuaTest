@@ -208,7 +208,7 @@ namespace Extend {
 
 			if( Default == null ) {
 				Default = new LuaEnv();
-				// Default.AddBuildin("cjson", Lua.LoadLuaCJson);
+				Default.AddBuildin("cjson", Lua.LoadLuaCJson);
 				// Default.AddBuildin("chronos", Lua.LoadChronos);
 #if EMMY_CORE_SUPPORT
 				Default.AddBuildin("emmy_core", Lua.LoadEmmyCore);

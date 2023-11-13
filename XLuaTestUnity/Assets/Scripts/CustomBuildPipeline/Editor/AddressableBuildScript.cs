@@ -115,15 +115,15 @@ namespace CustomBuildPipeline.Editor
 			}
 			else
 			{
-				SetWwisePlatform();
-				if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.Android)
-				{
-					MoveAssetToRemoteGroup("WwiseUpdateAndroid");
-				}
-				else if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.iOS)
-				{
-					MoveAssetToRemoteGroup("WwiseUpdateiOS");
-				}
+				// SetWwisePlatform();
+				// if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.Android)
+				// {
+				// 	MoveAssetToRemoteGroup("WwiseUpdateAndroid");
+				// }
+				// else if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.iOS)
+				// {
+				// 	MoveAssetToRemoteGroup("WwiseUpdateiOS");
+				// }
 
 				var contentSource = Path.GetDirectoryName(Application.dataPath) + "/" +
 				                    $"{AddressableAssetSettingsDefaultObject.kDefaultConfigFolder}/{PlatformMappingService.GetPlatformPathSubFolder()}" +
