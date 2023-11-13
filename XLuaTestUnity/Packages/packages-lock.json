@@ -8,6 +8,12 @@
         "com.unity.addressables": "1.1.5"
       }
     },
+    "com.marijnzwemmer.unity-toolbar-extender": {
+      "version": "file:unity-toolbar-extender",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.oddworm.addressablesbuildlayoutexplorer": {
       "version": "file:com.oddworm.addressablesbuildlayoutexplorer",
       "depth": 0,
@@ -178,6 +184,12 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "jillejr.newtonsoft.json-for-unity.converters": {
+      "version": "file:Newtonsoft.Json-for-Unity.Converters",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
     },
     "me.qiankanglai.loopscrollrect": {
       "version": "file:LoopScrollRect",
