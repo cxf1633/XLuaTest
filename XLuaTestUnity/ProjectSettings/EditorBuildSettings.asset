@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartUp.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Examples/UGUIPassEvent/UGUIPassEvent.unity
+    guid: 09f00b38e21b8e94183ad6feb1feaa5f
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 94dd1e493d95ff14995d6cd603299d4e, type: 2}
