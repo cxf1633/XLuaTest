@@ -391,7 +391,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000874457}
-  m_LocalRotation: {x: 0.29178053, y: -0.000000016457646, z: 0.000000005020486, w: 0.95648533}
+  m_LocalRotation: {x: 0.29178053, y: 0.000000016457655, z: -0.0000000050204885, w: 0.95648533}
   m_LocalPosition: {x: 0, y: 7.79, z: -11.580005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 1252596223}
   - component: {fileID: 1252596222}
   m_Layer: 0
-  m_Name: "\u5B9A\u5411\u5149"
+  m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -838,7 +838,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562376704}
-  m_LocalRotation: {x: 0.29178053, y: -0.000000016457646, z: 0.000000005020486, w: 0.95648533}
+  m_LocalRotation: {x: 0.29178053, y: 0.000000016457655, z: -0.0000000050204885, w: 0.95648533}
   m_LocalPosition: {x: 0, y: 7.79, z: -11.580005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

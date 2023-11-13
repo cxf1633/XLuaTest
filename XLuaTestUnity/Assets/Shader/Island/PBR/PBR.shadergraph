@@ -1781,9 +1781,7 @@
     "m_AlphaMode": 4,
     "m_TwoSided": false,
     "m_AlphaClip": false,
-    "m_CustomEditorGUI": "",
-    "m_CustomZWrite": true,
-    "m_CustomCull": false
+    "m_CustomEditorGUI": ""
 }
 
 {

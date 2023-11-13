@@ -42,21 +42,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 515497a4f7e41ba4dac57a2349811ecf
-    m_Address: Assets/Settings/UniversalRenderPipelineAsset_Middle.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c9149324989e1424d8a4d240b9457ce5
-    m_Address: Assets/Settings/UniversalRenderPipelineAsset_Middle_Renderer.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 261ea9c85d0060d41bf01ec09b04b147
-    m_Address: Assets/Settings/UniversalRenderPipelineAsset_UIRenderer.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1b7dc3eaf422e4848a5832bdad084734
     m_Address: Assets/Res/StateLifeTimeLoader.prefab
     m_ReadOnly: 0

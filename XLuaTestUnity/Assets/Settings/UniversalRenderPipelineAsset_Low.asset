@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf2edee5c58d82540a51f03df9d42094, type: 3}
-  m_Name: UniversalRenderPipelineAsset_Middle
+  m_Name: UniversalRenderPipelineAsset_Low
   m_EditorClassIdentifier: 
   k_AssetVersion: 6
   k_AssetPreviousVersion: 5
@@ -20,22 +20,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 111521f6c411a044e8c8e22ee9d0e0c6, type: 2}
   - {fileID: 11400000, guid: c5621b9729fbc0343ba2f81f81840b3c, type: 2}
   m_DefaultRendererIndex: 0
-  m_RequireDepthTexture: 1
+  m_RequireDepthTexture: 0
   m_RequireOpaqueTexture: 0
   m_OpaqueDownsampling: 1
   m_SupportsTerrainHoles: 0
   m_StoreActionsOptimization: 0
-  m_SupportsHDR: 1
+  m_SupportsHDR: 0
   m_MSAA: 1
   m_RenderScale: 1
   m_MainLightRenderingMode: 1
-  m_MainLightShadowsSupported: 1
+  m_MainLightShadowsSupported: 0
   m_MainLightShadowmapResolution: 1024
-  m_AdditionalLightsRenderingMode: 1
+  m_AdditionalLightsRenderingMode: 0
   m_AdditionalLightsPerObjectLimit: 4
   m_AdditionalLightShadowsSupported: 0
   m_AdditionalLightsShadowmapResolution: 512
-  m_ShadowDistance: 40
+  m_ShadowDistance: 20
   m_ShadowCascadeCount: 1
   m_Cascade2Split: 0.25
   m_Cascade3Split: {x: 0.1, y: 0.3}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MixedLightingSupported: 0
   m_DebugLevel: 0
   m_UseAdaptivePerformance: 1
-  m_ColorGradingMode: 1
+  m_ColorGradingMode: 0
   m_ColorGradingLutSize: 32
   m_ShadowType: 1
   m_LocalShadowsSupported: 0
